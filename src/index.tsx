@@ -1,12 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import * as serviceWorker from './lib/service_worker';
+import pip from 'public-ip';
+import App from './app/App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+(async () => {
+	// const ip = await pip.v4();
+	// fetch(`https://home-reporter-app.herokuapp.com/?ip=${ip}&time=${new Date()}`)
+	// .then()
+	// .catch(e => console.log(e));
+})();
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+var mountNode = document.getElementById('app');
+ReactDOM.render(<App />, mountNode);
+
+serviceWorker.register();
