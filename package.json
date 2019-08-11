@@ -2,7 +2,12 @@
 	"name": "home-v2",
 	"version": "3.0.0",
 	"description": "Homepage SPA",
-	"keywords": ["react", "styled-components", "storybook", "parcel"],
+	"keywords": [
+		"react",
+		"styled-components",
+		"storybook",
+		"parcel"
+	],
 	"author": "Dmitry Melnikov",
 	"license": "ISC",
 	"private": true,
@@ -12,6 +17,7 @@
 		"react-dom": "^16.9.0",
 		"react-icons": "^3.7.0",
 		"react-scripts": "3.0.1",
+		"react-spring": "^8.0.27",
 		"source-map-explorer": "^2.0.1",
 		"styled-components": "^4.3.2",
 		"webfontloader": "^1.6.28"
@@ -48,7 +54,11 @@
 		"extends": "react-app"
 	},
 	"browserslist": {
-		"production": [">0.2%", "not dead", "not op_mini all"],
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
 		"development": [
 			"last 1 chrome version",
 			"last 1 firefox version",

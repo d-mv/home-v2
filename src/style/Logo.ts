@@ -3,7 +3,6 @@ import { DefaultButton } from './tokens/reset';
 import { h4 } from './tokens/typography';
 import { grey, white } from './tokens/color';
 import { textShadow } from './tokens/ui';
-import { appear } from './tokens/keyframes';
 
 export interface LProps {
 	status: boolean;
@@ -14,7 +13,6 @@ const Logo = styled(DefaultButton)<LProps>`
 	left: 0.5rem;
 	top: 0.8rem;
 	padding: 0.2rem;
-	opacity: 0;
 	z-index: 5;
 	user-select: none;
 	background-color: rgba(0, 0, 0, 0);
@@ -22,7 +20,6 @@ const Logo = styled(DefaultButton)<LProps>`
 	font: ${h4};
 	color: ${grey};
 	text-shadow: ${textShadow};
-	animation: 1s ease-in-out 1s forwards ${appear};
 	&::before {
 		content: '';
 		z-index: -1;

@@ -1,11 +1,12 @@
 import styled from 'styled-components';
+import { animated } from 'react-spring';
 
 export interface ILProps {
 	width?: string;
 	margin?: string;
 }
 
-const InLine = styled.span<ILProps>`
+const InLine = styled(animated.span)<ILProps>`
 	display: flex;
 	justify-content: flex-start;
 	flex-direction: row;

@@ -12,8 +12,8 @@ export interface NBPRops {
 
 const NavButton = (props: NBPRops) => (
 	<Box
-		id='box'
-		height={props.module.title === 'HOME'&& !props.mobile ? 10 : undefined}>
+		id={`navbar__box_${props.module.title}`}
+		height={props.module.title === 'HOME' && !props.mobile ? 10 : undefined}>
 		<Button
 			id='navbar__button'
 			active={props.active}

@@ -2,12 +2,13 @@ import styled from 'styled-components';
 import { appear } from '../tokens/keyframes';
 import { shadow, shadowActive } from '../tokens/ui';
 import { transition } from '../tokens/animation';
+import { animated } from 'react-spring';
 
 export interface PProps {
 	image: string;
 }
 
-const Photo = styled.div<PProps>`
+const Photo = styled(animated.div)<PProps>`
 	height: 100%;
 	width: 100%;
 	opacity: 0;

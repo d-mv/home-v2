@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import { animated } from 'react-spring';
 import { dark, white } from './color';
 
-export const DefaultButton = styled.button`
+export const DefaultButton = styled(animated.button)`
 	appearance: none;
 	background: none;
 	padding: 0;

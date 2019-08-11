@@ -7,8 +7,8 @@ export interface TIProps {
 }
 
 const TechIcon = styled.div<TIProps>`
-	height: 3rem;
-	width: 3rem;
+	height: 2.5rem;
+	width: 2.5rem;
 	opacity: 0;
 	background: rgba(0, 0, 0, 0) url(${props => props.image}) no-repeat scroll center center /
 		contain;

@@ -10,7 +10,7 @@ const Content = styled.div<CProps>`
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	height: ${props => (props.height ? props.height : undefined)};
+	height: inherit;
 `;
 
 export default Content;

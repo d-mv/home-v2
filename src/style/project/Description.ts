@@ -2,8 +2,9 @@ import styled from 'styled-components';
 import { p } from '../tokens/typography';
 import { white } from '../tokens/color';
 import { textShadow } from '../tokens/ui';
+import { animated } from 'react-spring';
 
-const Description = styled.article`
+const Description = styled(animated.article)`
 	font: ${p};
 	color: ${white};
 	text-shadow: ${textShadow};
@@ -12,6 +13,7 @@ const Description = styled.article`
 	max-height: 70%;
 	overflow: hidden;
 	line-height: 2.2rem;
+	overflow:auto;
 	@media (max-height: 700px) {
 		font-size: 1.4rem;
 	}

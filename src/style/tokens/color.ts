@@ -1,7 +1,6 @@
 export const white = 'rgb(247, 247, 247)';
 export const whiteTrans = `rgba(247, 247, 247,0.5)`;
 export const white80 = `rgba(247, 247, 247,0.8)`;
-export const clean = '#fff';
 export const dark = '#444';
 export const grey = '#707070';
 export const darkShadow = `rgba(68, 68, 68, 0.2)`;

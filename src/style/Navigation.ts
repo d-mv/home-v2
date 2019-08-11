@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { slider } from './tokens/keyframes';
 import { darkModal } from './tokens/color';
+import { animated } from 'react-spring';
 
-const Navigation = styled.nav`
+const Navigation = styled(animated.nav)`
 	display: flex;
 	position: fixed;
 	top: 3rem;
@@ -11,7 +11,6 @@ const Navigation = styled.nav`
 	justify-content: space-between;
 	align-items: center;
 	z-index: 2;
-	animation: 1s ease-in-out 0s forwards ${slider};
 	@media (max-width: 499px) {
 		top: 3.9rem;
 		left: 0;

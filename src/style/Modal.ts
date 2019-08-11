@@ -7,7 +7,6 @@ const Modal = styled.div`
 	width: 100%;
 	height: 100%;
 	background-color: ${darkModal};
-	padding: 2rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;

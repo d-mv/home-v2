@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { h1 } from '../tokens/typography';
 import { DefaultButton } from '../tokens/reset';
 import { transitionSlow } from '../tokens/animation';
-import { accent, dark, white80 } from '../tokens/color';
+import { accent, dark, white80, white } from '../tokens/color';
 
 export interface BProps {
 	margin?: string;
@@ -32,6 +32,7 @@ const Button = styled(DefaultButton)<BProps>`
 	@media (max-width: 499px) {
 		padding: 1rem;
 		transform: none;
+		color: ${white};
 	}
 `;
 

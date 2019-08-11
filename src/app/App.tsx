@@ -14,7 +14,6 @@ const App = () => {
 	const [module, setModule] = useState('HOME');
 	const [project, setProject] = useState();
 	const mobile = window.innerWidth <= 500;
-	// const [navBarOpen, setNavBarOpen] = useState(true);
 	const [navBarOpen, setNavBarOpen] = useState(mobile ? false : true);
 
 	const close = () => setProject('');

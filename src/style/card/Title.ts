@@ -6,7 +6,7 @@ export interface TProps {
   color?: string;
 }
 
-const Title = styled.h2`
+const Title = styled.h2<TProps>`
   margin: 1rem 1rem;
   font: ${h2};
   text-shadow: ${textShadow};

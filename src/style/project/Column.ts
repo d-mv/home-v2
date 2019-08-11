@@ -13,12 +13,10 @@ const Column = styled.section<CProps>`
 	align-items: center;
 	width: ${props => (props.width ? props.width : undefined)};
 	min-width: ${props => (props.minWidth ? props.minWidth : undefined)};
-	height: 100%;
-	padding: 1rem;
+	height: inherit;
 	margin: 0 1rem;
-	@media (max-width: 719px) {
+	@media (max-width: 799px) {
 		width: 90%;
-		margin: 0 2.5%;
 	}
 `;
 
