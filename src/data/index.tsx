@@ -256,15 +256,15 @@ export const data: Data = {
 				],
 				details: {
 					s:
-						'https://res.cloudinary.com/diciu4xpu/image/upload/v1564833036/home/v2/projects/details__our-change_s.png',
-					l:
-						'https://res.cloudinary.com/diciu4xpu/image/upload/v1564833042/home/v2/projects/details__our-change_l.png',
+						'https://res.cloudinary.com/diciu4xpu/image/upload/v1565597104/home/v2/projects/details__heritage_s.png',
 					m:
-						'https://res.cloudinary.com/diciu4xpu/image/upload/v1564833040/home/v2/projects/details__our-change_m.png',
+						'https://res.cloudinary.com/diciu4xpu/image/upload/v1565597108/home/v2/projects/details__heritage_m.png',
+					l:
+						'https://res.cloudinary.com/diciu4xpu/image/upload/v1565597110/home/v2/projects/details__heritage_l.png',
 					xl:
-						'https://res.cloudinary.com/diciu4xpu/image/upload/v1564833142/home/v2/projects/details__our-change-xl.png',
+						'https://res.cloudinary.com/diciu4xpu/image/upload/v1565597117/home/v2/projects/details__heritage_xl.png',
 					xxl:
-						'https://res.cloudinary.com/diciu4xpu/image/upload/v1564833057/home/v2/projects/details__our-change-xxl.png'
+						'https://res.cloudinary.com/diciu4xpu/image/upload/v1565597122/home/v2/projects/details__heritage_xxl.png'
 				}
 			},
 			details:

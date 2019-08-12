@@ -9,7 +9,9 @@ enum PictureSize {
 }
 
 export const imageSize = (photo: DetailsPhotos) => {
-  const width = window.screen.width * window.devicePixelRatio;
+  const width = window.screen.width
+  // TODO: upscale?
+  // const width = window.screen.width * window.devicePixelRatio;
   let result = photo.s;
   if (width > PictureSize.s && width <= PictureSize.m) result = photo.m;
   if (width > PictureSize.m && width <= PictureSize.l) result = photo.l;
