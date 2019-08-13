@@ -11,7 +11,7 @@ import { LogoButton, NavBar, Project } from '../components';
 import Wrapper from '../style/Wrapper';
 
 const App = () => {
-	const [module, setModule] = useState('PROJECTS');
+	const [module, setModule] = useState('HOME');
 	const [project, setProject] = useState();
 	const mobile = window.innerWidth <= 500;
 	const [navBarOpen, setNavBarOpen] = useState(!mobile);
