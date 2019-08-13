@@ -1,19 +1,25 @@
 import styled from 'styled-components';
 import { p } from '../tokens/typography';
 import { white } from '../tokens/color';
-import { textShadow } from '../tokens/ui';
-import { animated } from 'react-spring';
+import { textShadow, textShadowDM } from '../tokens/ui';
+import {appear } from '../tokens/keyframes';
 
-const Description = styled(animated.article)`
+const Description = styled.article`
 	font: ${p};
 	color: ${white};
-	text-shadow: ${textShadow};
 	letter-spacing: 0.1rem;
 	user-select: none;
-	max-height: 70%;
 	overflow: hidden;
 	line-height: 2.2rem;
-	overflow:auto;
+	overflow: auto;
+	opacity: 0;
+	animation: ${appear} 1s ease-in-out 0s forwards;
+	@media (prefers-color-scheme: light) {
+		text-shadow: ${textShadow};
+	}
+	@media (prefers-color-scheme: dark) {
+		text-shadow: ${textShadowDM};
+	}
 	@media (max-height: 700px) {
 		font-size: 1.4rem;
 	}

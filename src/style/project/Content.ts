@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export interface CProps {
 	height?: string;
+	modalIsOpen: boolean;
 }
 
 const Content = styled.div<CProps>`
@@ -11,6 +12,7 @@ const Content = styled.div<CProps>`
 	justify-content: center;
 	align-items: center;
 	height: inherit;
+	overflow: ${props => (props.modalIsOpen ? 'hidden' : undefined)};
 `;
 
 export default Content;

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 import { stringLine } from '../lib/utils';
-
 import { ArrowButton } from '../components';
 
 import { PhotoObj } from '../types';

@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import { DefaultButton } from './tokens/reset';
-import { h4 } from './tokens/typography';
+import { fontSans } from './tokens/typography';
 import { grey, white } from './tokens/color';
 import { textShadow } from './tokens/ui';
+import { appear, fontTo18 } from './tokens/keyframes';
 
 export interface LProps {
 	status: boolean;
@@ -17,7 +18,9 @@ const Logo = styled(DefaultButton)<LProps>`
 	user-select: none;
 	background-color: rgba(0, 0, 0, 0);
 	text-decoration: ${props => (props.status ? 'none' : 'underline')};
-	font: ${h4};
+	font-size: 0;
+	font-weight: 500;
+	font-family: ${fontSans};
 	color: ${grey};
 	text-shadow: ${textShadow};
 	&::before {
@@ -33,6 +36,9 @@ const Logo = styled(DefaultButton)<LProps>`
 		transform: scaleY(0);
 		transition: transform 0.7s ease-in-out;
 	}
+	animation: ${fontTo18} 0.5s ease-in-out 1s forwards,
+		${appear} 1.5s ease-in-out 1s forwards;
+
 	@media (hover: hover) {
 		&:hover {
 			text-shadow: none;

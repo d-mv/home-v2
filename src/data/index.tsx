@@ -181,7 +181,7 @@ export const data: Data = {
 				'At certain point faced the need to make a homepage, which will act as a business card and a showcase. It had to reflect... basically me. From the beginning the decision was made not to use templates and work out something different. The result - you are looking at it. The initial mockup was done in Sketch, the working mockup in HTML/CSS. As main tool I used Vue.js (+ Vuex) with SCSS. To simplify dev process, the project is using JSON file with all the data and links to images on Cloudinary. Favicon designed  in Affinity Designer, while the pack with manifest.json done with Image2icon app. Later if has been reworked from ground in React. Styled Components instead of SCSS and React Icons instead of Font Awesome. TypeScript, auto Dark Mode on macOS.',
 			technology: ['react', 'ts', 'styled', 'ricons'],
 			links: {
-				github: 'https://github.com/d-mv/home-react-styled',
+				github: 'https://github.com/d-mv/home-v2',
 				deployed: 'https://melnikov.dev'
 			}
 		},
@@ -195,15 +195,16 @@ export const data: Data = {
 				],
 				details: {
 					s:
-						'https://res.cloudinary.com/diciu4xpu/image/upload/v1564833036/home/v2/projects/details__our-change_s.png',
-					l:
-						'https://res.cloudinary.com/diciu4xpu/image/upload/v1564833042/home/v2/projects/details__our-change_l.png',
+						'https://res.cloudinary.com/diciu4xpu/image/upload/v1565724155/home/v2/projects/details__chaserz_s.png',
+
 					m:
-						'https://res.cloudinary.com/diciu4xpu/image/upload/v1564833040/home/v2/projects/details__our-change_m.png',
+						'https://res.cloudinary.com/diciu4xpu/image/upload/v1565724159/home/v2/projects/details__chaserz_m.png',
+					l:
+						'https://res.cloudinary.com/diciu4xpu/image/upload/v1565724172/home/v2/projects/details__chaserz_l.png',
 					xl:
-						'https://res.cloudinary.com/diciu4xpu/image/upload/v1564833142/home/v2/projects/details__our-change-xl.png',
+						'https://res.cloudinary.com/diciu4xpu/image/upload/v1565724170/home/v2/projects/details__chaserz_xl.png',
 					xxl:
-						'https://res.cloudinary.com/diciu4xpu/image/upload/v1564833057/home/v2/projects/details__our-change-xxl.png'
+						'https://res.cloudinary.com/diciu4xpu/image/upload/v1565724176/home/v2/projects/details__chaserz_xxl.png'
 				}
 			},
 			details:
@@ -212,8 +213,7 @@ export const data: Data = {
 			links: {
 				github: 'https://github.com/d-mv/chaserz',
 				deployed: 'https://chaserz-dev.herokuapp.com/',
-				video: 'https://drive.google.com/open?id=1M2lTK6MzgQAMx-YspqgrFs9foKKw-lyC',
-				other: ''
+				video: 'https://drive.google.com/open?id=1M2lTK6MzgQAMx-YspqgrFs9foKKw-lyC'
 			}
 		},
 		{
@@ -239,7 +239,7 @@ export const data: Data = {
 				}
 			},
 			details:
-				'With too many bright colours, moving elements and over-use of font weights and sizes, rather hard to focus on the information. This app works with text only, which is parsed and stored in DB. Currently, as a proof of concept parser is set to work with Medium blogs, which are overloaded with large graphics and distracting elements. This has been a pet project from the beginning. Started as RoR and later with Hanami, with PostgreSQL. Later, a further take on the app concept has seen drop of Ruby/Hanami, Bootstrap and Font Awesome in favour of React/Redux and SCSS for front and Node.js with Express and MongoDB for back. In the process of further upgrade to TypeScript, rework of backend methods in favor of simplicity and speed, as well as a pending full overhaul of front',
+				'With too many bright colours, moving elements and over-use of font weights and sizes, rather hard to focus on the information.  Currently, as a proof of concept parser is set to work with Medium blogs, which are overloaded with large graphics and distracting elements. This has been a pet project from the beginning. Started as RoR and later with Hanami, with PostgreSQL and  later dropped them in favour of React/Redux and SCSS for front and Node.js with Express and MongoDB for back. In the process of further upgrade to TypeScript, rework of backend methods in favor of simplicity and speed, as well as a pending full overhaul of front',
 			technology: ['react', 'redux', 'styled', 'ts', 'mongo', 'node', 'express', 'scss'],
 			links: {
 				github: 'https://github.com/d-mv/newsletter-single',

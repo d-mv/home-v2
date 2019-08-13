@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { DefaultButton } from '../tokens/reset';
-import { dark, white } from '../tokens/color';
+import { dark, white, whiteTrans } from '../tokens/color';
 import { transition } from '../tokens/animation';
 
 const Arrow = styled(DefaultButton)`
@@ -22,7 +22,7 @@ const Arrow = styled(DefaultButton)`
 	@media (hover: hover) {
 		@media (prefers-color-scheme: dark) {
 			&:hover {
-				background-color: ${white};
+				background-color: ${whiteTrans};
 				color: ${dark};
 			}
 		}

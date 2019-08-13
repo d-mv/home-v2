@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { scale, shadowDrop } from '../tokens/keyframes';
+import { shadowDrop, stretch, shadowDropDM } from '../tokens/keyframes';
 import { shadowHover } from '../tokens/ui';
 
 export interface PProps {
@@ -17,9 +17,13 @@ const Photo = styled.div<PProps>`
 	background-color: rgba(0, 0, 0, 0);
 	border-radius: 1rem;
 	filter: grayscale(1);
+	max-width: 0;
+	animation: ${stretch} 0.5s ease-in-out 0.3s forwards,
+		${shadowDropDM} 0.5s ease-in-out 0.3s forwards;
+
 	@media (prefers-color-scheme: light) {
-		animation: ${shadowDrop} 1s ease-in-out 0s forwards,
-			${scale} 1s ease-in-out 0s forwards;
+		animation: ${stretch} 0.5s ease-in-out 0.3s forwards,
+			${shadowDrop} 0.5s ease-in-out 0.3s forwards;
 		&:hover {
 			box-shadow: ${shadowHover};
 		}

@@ -11,10 +11,10 @@ import { LogoButton, NavBar, Project } from '../components';
 import Wrapper from '../style/Wrapper';
 
 const App = () => {
-	const [module, setModule] = useState('HOME');
+	const [module, setModule] = useState('PROJECTS');
 	const [project, setProject] = useState();
 	const mobile = window.innerWidth <= 500;
-	const [navBarOpen, setNavBarOpen] = useState(mobile ? false : true);
+	const [navBarOpen, setNavBarOpen] = useState(!mobile);
 
 	const close = () => setProject('');
 	const handleModuleChange = (newModule: string) => {
@@ -23,15 +23,17 @@ const App = () => {
 	};
 
 	const logo = <LogoButton status={navBarOpen} onClick={setNavBarOpen} />;
-	const navbar = <NavBar module={module} onClick={handleModuleChange} />;
+	const navbar = <NavBar mobile={mobile} module={module} onClick={handleModuleChange} />;
 	const home = module === 'HOME' && <Home />;
-	const projects = module === 'PROJECTS' && <Projects onClick={setProject} />;
+	const projects = module === 'PROJECTS' && (
+		<Projects modalIsOpen={project} onClick={setProject} />
+	);
 	const modal = project && <Project project={project} onClick={close} />;
 	const photos = module === 'PHOTOS' && <Photos />;
 	const contact = module === 'CONTACT' && <Contact />;
 
 	return (
-		<Wrapper>
+		<Wrapper id="app__wrapper">
 			<Global />
 			{logo}
 			{navBarOpen && navbar}

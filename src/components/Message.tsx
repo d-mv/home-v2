@@ -1,11 +1,10 @@
 import React from 'react';
-import {animated,useSpring} from 'react-spring'
 import { H1, H2, H3, H4, H5 } from '../style/home/Message';
 import { Underline } from '../style/tokens/animation';
 import { dark } from '../style/tokens/color';
 
 export const Message = () => (
-	<animated.article id='home__message' style={useSpring({ from: { opacity: 0 }, to: { opacity: 1 } })}>
+	<article id='home__message'>
 		<H1 id='home__message_h1'>WELCOME,</H1>
 		<H2 id='home__message_h2'>I’m Dmitry</H2>
 		<H3 id='home__message_h3'>FRONT-END DEVELOPER</H3>
@@ -20,5 +19,5 @@ export const Message = () => (
 			</Underline>
 			{' }'}
 		</H5>
-	</animated.article>
+	</article>
 );

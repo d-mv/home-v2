@@ -5,7 +5,7 @@ const Modal = styled.div`
 	position: fixed;
 	top: 0;
 	width: 100%;
-	height: 100%;
+	height: inherit;
 	background-color: ${darkModal};
 	display: flex;
 	flex-direction: column;

@@ -7,8 +7,8 @@ export interface TIProps {
 }
 
 const TechIcon = styled.div<TIProps>`
-	height: 2.5rem;
-	width: 2.5rem;
+	height: 2.8rem;
+	width: 2.8rem;
 	opacity: 0;
 	background: rgba(0, 0, 0, 0) url(${props => props.image}) no-repeat scroll center center /
 		contain;
@@ -21,6 +21,22 @@ const TechIcon = styled.div<TIProps>`
 	animation-duration: 3s;
 	animation-fill-mode: forwards;
 	animation-name: ${appear};
+	@media (max-height: 700px) {
+		height: 2.3rem;
+		width: 2.3rem;
+	}
+	@media (max-height: 600px) {
+		height: 2.1rem;
+		width: 2.1rem;
+	}
+	@media (max-height: 560px) {
+		height: 1.9rem;
+		width: 1.9rem;
+	}
+	@media (max-height: 470px) {
+		height: 1.5rem;
+		width: 1.5rem;
+	}
 `;
 
 export default TechIcon;

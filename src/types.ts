@@ -47,16 +47,16 @@ export interface ProjectPhoto {
 		xxl: string;
 	};
 }
-export interface ProjectLinks {
+export interface ProjLinks {
 	[index: string]: string;
 }
-export interface ProjectObj {
+export interface ProjObj {
 	title: string;
 	description: string;
 	photo: ProjectPhoto;
 	details: string;
 	technology: string[];
-	links: ProjectLinks;
+	links: ProjLinks;
 }
 export interface ContactObj {
 	icon: string;
@@ -66,7 +66,7 @@ export interface ContactObj {
 
 export interface Data {
 	photos: PhotoObj[];
-	projects: ProjectObj[];
+	projects: ProjObj[];
 	technology: { [index: string]: string[] };
 	contacts: ContactObj[];
 }

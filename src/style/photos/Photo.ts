@@ -1,14 +1,13 @@
 import styled from 'styled-components';
 import { appear } from '../tokens/keyframes';
-import { shadow, shadowActive } from '../tokens/ui';
+import { shadow, shadowActive, shadowActiveDM } from '../tokens/ui';
 import { transition } from '../tokens/animation';
-import { animated } from 'react-spring';
 
 export interface PProps {
 	image: string;
 }
 
-const Photo = styled(animated.div)<PProps>`
+const Photo = styled.div<PProps>`
 	height: 100%;
 	width: 100%;
 	opacity: 0;
@@ -34,15 +33,20 @@ const Photo = styled(animated.div)<PProps>`
 	&:hover {
 		filter: grayscale(0);
 	}
-	&:active {
-		box-shadow: ${shadowActive};
-	}
+
 	@media (min-width: 500px) {
 		border-radius: 0.4rem;
 		margin: 0 1rem;
 		filter: grayscale(1);
-		&:active {
-			transform: scale(1.03);
+	}
+	@media (prefers-color-scheme: light) {
+		&:hover {
+			box-shadow: ${shadowActive};
+		}
+	}
+	@media (prefers-color-scheme: dark) {
+		&:hover {
+			box-shadow: ${shadowActiveDM};
 		}
 	}
 `;

@@ -17,6 +17,7 @@ const Column = styled.section<CProps>`
 	margin: 0 1rem;
 	@media (max-width: 799px) {
 		width: 90%;
+		min-height:50%;
 	}
 `;
 
