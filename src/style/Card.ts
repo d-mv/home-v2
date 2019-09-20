@@ -15,14 +15,17 @@ const Card = styled.article`
 	transition: ${transition};
 	width: 30rem;
 
-	&:hover {
-		filter: grayscale(0);
-		transform: scale(1.01);
-		box-shadow: ${shadowHover};
-		div {
-			border-color: ${accent};
+	@media (min-width: 500px) {
+		&:hover {
+			filter: grayscale(0);
+			transform: scale(1.01);
+			box-shadow: ${shadowHover};
+			div {
+				border-color: ${accent};
+			}
 		}
 	}
+
 	&:active {
 		transform: scale(0.99);
 		box-shadow: ${shadowActive};

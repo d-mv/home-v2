@@ -13,7 +13,7 @@ export const modules: ModuleData[] = [
 export const icons: Icon[] = [
 	{
 		element: <FaGithubAlt id='contact__icon_github' />,
-		label: 'GitHub repositories for projects',
+		label: 'GitHub repositories',
 		link: 'https://github.com/d-mv'
 	},
 	{
@@ -154,7 +154,7 @@ export const data: Data = {
 			details:
 				"A social app for citizens to communicate the issues to the municipality. Created for a client as an MVP, the app bears all the required features for posting illustrated mini-posts with optional solutions as well as votes. Municipality can post news, well as post notes to the users' posts, and users can reply to them. Desktop version for analytics, while opening the app from mobile gives full functionality",
 			technology: ['react', 'redux', 'styled', 'node', 'express', 'mongo'],
-			links: { deploy: 'https://our-change.herokuapp.com/' }
+			links: { deployed: 'https://ourchange-dev.herokuapp.com/' }
 		},
 		{
 			title: 'Homepage SPA',

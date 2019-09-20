@@ -32,14 +32,26 @@ const Line = styled(DefaultParagraph)<LProps>`
 		text-shadow: ${textShadow};
 	}
 
-	@media (prefers-color-scheme: dark) {
+	@media (prefers-color-scheme: dark) and (min-width: 500px) {
 		&:hover {
 			border-bottom: 2px solid ${accent};
 			box-shadow: ${shadowPlankDM};
 		}
 	}
-	@media (prefers-color-scheme: light) {
+	@media (prefers-color-scheme: light) and (min-width: 500px) {
 		&:hover {
+			border-bottom: 2px solid ${dark};
+			box-shadow: ${shadowPlank};
+		}
+	}
+	@media (prefers-color-scheme: dark) and (max-width: 499px) {
+		&:active {
+			border-bottom: 2px solid ${accent};
+			box-shadow: ${shadowPlankDM};
+		}
+	}
+	@media (prefers-color-scheme: light) and (max-width: 499px) {
+		&:active {
 			border-bottom: 2px solid ${dark};
 			box-shadow: ${shadowPlank};
 		}

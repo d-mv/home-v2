@@ -17,7 +17,7 @@ const Button = styled(DefaultButton)<BProps>`
 	cursor: pointer;
 	outline: none;
 	color: ${props => (props.active ? accent : undefined)} !important;
-	@media (hover: hover) {
+	@media (hover: hover) and (min-width: 500px) {
 		&:hover {
 			transform: none;
 			height: 80%;
