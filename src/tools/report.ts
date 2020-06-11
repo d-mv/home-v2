@@ -1,5 +1,4 @@
 function report(ip: string): void {
-  console.log(ip)
 	try {
 		const config: RequestInit = {
 			body: JSON.stringify({
