@@ -3,12 +3,11 @@ import * as ReactDOM from 'react-dom';
 import * as serviceWorker from './lib/service_worker';
 import pip from 'public-ip';
 import App from './app/App';
+import { report } from './tools/report';
 
 (async () => {
 	const ip = await pip.v4();
-	fetch(`https://home-reporter-app.herokuapp.com/?ip=${ip}&time=${new Date()}`)
-		.then()
-		.catch(e => console.log(e));
+	report(ip);
 })();
 
 var mountNode = document.getElementById('app');
