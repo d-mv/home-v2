@@ -1,0 +1,98 @@
+@import "../style/keyframes.css";
+
+.content {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	padding: 1rem;
+	margin: 0 1rem;
+	width: 40%;
+
+	@media (max-width: 749px) {
+		padding: 1rem 0;
+	}
+	@media (max-width: 649px) {
+		width: 100%;
+		height: inherit;
+		padding: 1rem 3rem;
+	}
+}
+
+.photo {
+	height: calc(100vh / 1.2); /* Approximation of window.innerHeight / 12 rem */
+	width: 70%;
+
+	/* background image set via inline style */
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: rgba(
+		0,
+		0,
+		0,
+		0
+	); /* Fallback? TS had white then rgba(0,0,0,0) overriding it */
+
+	user-select: none;
+	border-radius: 1rem;
+	filter: grayscale(1);
+	max-width: 0;
+
+	animation-name: stretch, shadowDropDM;
+	animation-duration: 0.5s;
+	animation-timing-function: ease-in-out;
+	animation-delay: 0.3s;
+	animation-fill-mode: forwards;
+
+	@media (prefers-color-scheme: light) {
+		animation-name: stretch, shadowDrop;
+		/* Other properties inherited or re-declared if needed */
+		animation-duration: 0.5s;
+		animation-timing-function: ease-in-out;
+		animation-delay: 0.3s;
+		animation-fill-mode: forwards;
+
+		&:hover {
+			box-shadow: var(--shadow-hover);
+		}
+	}
+
+	&:hover {
+		filter: grayscale(0);
+	}
+
+	@media (max-width: 999px) {
+		width: 80%;
+	}
+	@media (max-width: 899px) {
+		width: 90%;
+	}
+	@media (max-width: 699px) {
+		width: 100%;
+	}
+	@media (max-width: 649px) {
+		width: 50%;
+	}
+	@media (max-width: 599px) {
+		width: 60%;
+	}
+	@media (max-width: 499px) {
+		width: 70%;
+	}
+	@media (max-width: 399px) {
+		width: 80%;
+	}
+	@media (max-width: 349px) {
+		width: 100%;
+	}
+}

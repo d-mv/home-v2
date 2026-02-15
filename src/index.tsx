@@ -1,16 +1,16 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import * as serviceWorker from './lib/service_worker';
-import pip from 'public-ip';
-import App from './app/App';
-import { report } from './tools/report';
+import { publicIpv4 } from "public-ip";
+import { createRoot } from "react-dom/client";
+import App from "./app/App";
+import "./style/variables.css";
+import { report } from "./tools/report";
 
 (async () => {
-	const ip = await pip.v4();
+	const ip = await publicIpv4();
 	report(ip);
 })();
 
-var mountNode = document.getElementById('app');
-ReactDOM.render(<App />, mountNode);
+const mountNode = document.getElementById("app");
 
-serviceWorker.register();
+if (mountNode) {
+	createRoot(mountNode).render(<App />);
+}

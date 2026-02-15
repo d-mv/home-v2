@@ -1,7 +1,6 @@
-import React from 'react';
-import Box from '../style/nav/Box';
-import { ModuleData } from '../types';
-import Button from '../style/nav/Button';
+import React from "react";
+import styles from "./NavBar.module.css";
+import { ModuleData } from "../types";
 
 export interface NBPRops {
 	mobile?: boolean;
@@ -11,17 +10,25 @@ export interface NBPRops {
 }
 
 const NavButton = (props: NBPRops) => (
-	<Box
+	<div
+		className={styles.box}
 		id={`navbar__box_${props.module.title}`}
-		height={props.module.title === 'HOME' && !props.mobile ? 10 : undefined}>
-		<Button
-			id='navbar__button'
-			active={props.active}
-			margin={props.module.margin}
-			onClick={() => props.onClick(props.module.title)}>
+		style={
+			{
+				"--box-height":
+					props.module.title === "HOME" && !props.mobile ? "10rem" : "12rem",
+			} as React.CSSProperties
+		}
+	>
+		<button
+			type="button"
+			className={`${styles.button} ${props.active ? styles.active : ""}`}
+			id="navbar__button"
+			onClick={() => props.onClick(props.module.title)}
+		>
 			{props.module.title}
-		</Button>
-	</Box>
+		</button>
+	</div>
 );
 
 export default NavButton;

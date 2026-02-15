@@ -1,28 +1,28 @@
-import React from 'react';
+import { icons } from "../data";
+import type { Icon } from "../types";
+import styles from "./Lines.module.css";
 
-import Line from '../style/contact/Line';
-import Label from '../style/contact/Label';
-import Column from '../style/Column';
-import { icons } from '../data';
-import { Icon } from '../types';
-
-const onClick = (url: string) => window.open(url, '_blank');
+const onClick = (url: string) => window.open(url, "_blank");
 
 export const Lines = () => (
-	<Column id='contact__column' width='40rem'>
+	<section id="contact__column" className={styles.column}>
 		{icons.map((icon: Icon, index: number) => {
-			console.log(index);
 			return (
-				<Line
-					id={`contact__line_${icon.label.split(' ').join('-')}`}
+				<button
+					type="button"
+					className={styles.line}
+					id={`contact__line_${icon.label.split(" ").join("-")}`}
 					key={icon.label}
-					delay={index * 0.3}
+					style={{
+						animationDelay: `${index * 0.3}s`,
+						justifyContent: "flex-start",
+					}}
 					onClick={() => onClick(icon.link)}
-					justify='flex-start'>
+				>
 					{icon.element}
-					<Label>{icon.label}</Label>
-				</Line>
+					<span className={styles.label}>{icon.label}</span>
+				</button>
 			);
 		})}
-	</Column>
+	</section>
 );

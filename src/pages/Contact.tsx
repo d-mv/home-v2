@@ -1,11 +1,11 @@
-import React from 'react';
-import Content from '../style/contact/Content';
-import { Lines } from '../components';
+import React from "react";
+import styles from "./Contact.module.css";
+import { Lines } from "../components";
 
 const Contact = () => (
-	<Content id='contact__content'>
+	<div id="contact__content" className={styles.content}>
 		<Lines />
-	</Content>
+	</div>
 );
 
 export default Contact;

@@ -9,59 +9,39 @@
 		"parcel"
 	],
 	"author": "Dmitry Melnikov",
+	"type": "module",
 	"license": "ISC",
 	"private": true,
 	"dependencies": {
-		"public-ip": "^4.0.1",
-		"react": "^16.13.1",
-		"react-dom": "^16.13.1",
-		"react-icons": "^3.10.0",
-		"react-scripts": "3.4.1",
-		"source-map-explorer": "^2.4.2",
-		"styled-components": "^5.1.1",
-		"webfontloader": "^1.6.28"
+		"public-ip": "^8.0.0",
+		"react": "^19.2.4",
+		"react-dom": "^19.2.4",
+		"styled-components": "^6.3.9"
 	},
 	"devDependencies": {
-		"@storybook/addon-actions": "^5.3.19",
-		"@storybook/addon-links": "^5.3.19",
-		"@storybook/addons": "^5.3.19",
-		"@storybook/react": "^5.3.19",
-		"@types/jest": "26.0.0",
-		"@types/node": "14.0.13",
-		"@types/react": "16.9.36",
-		"@types/react-dom": "16.9.8",
+		"@storybook/addon-actions": "^9.0.8",
+		"@storybook/addon-links": "^10.2.8",
+		"@storybook/addons": "^7.6.17",
+		"@storybook/react": "^10.2.8",
+		"@types/node": "^25.2.3",
+		"@types/public-ip": "^2.4.0",
+		"@types/react": "^19.2.14",
+		"@types/react-dom": "^19.2.3",
 		"@types/storybook__react": "^5.2.1",
-		"@types/styled-components": "^5.1.0",
-		"@types/webfontloader": "^1.6.32",
-		"app": "^0.1.0",
-		"components": "^0.1.0",
-		"prettier": "^2.0.5",
-		"src": "^1.1.2",
-		"style": "0.0.3",
-		"typescript": "^3.9.5"
+		"@types/styled-components": "^5.1.36",
+		"@vitejs/plugin-react": "^5.1.4",
+		"postcss": "^8.5.6",
+		"postcss-nesting": "^14.0.0",
+		"prettier": "^3.8.1",
+		"vite": "^7.3.1",
+		"vite-tsconfig-paths": "^6.1.1"
 	},
 	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject",
+		"start": "vite",
+		"build": "vite build",
+		"preview": "vite preview",
 		"storybook": "start-storybook -p 6006",
 		"build-storybook": "build-storybook",
 		"analyze": "source-map-explorer 'build/static/js/*.js'"
-	},
-	"eslintConfig": {
-		"extends": "react-app"
-	},
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
-		]
 	}
 }

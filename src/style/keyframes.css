@@ -1,0 +1,62 @@
+@keyframes appear {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes stretch {
+	0% {
+		max-width: 0%;
+	}
+	100% {
+		max-width: 100%;
+	}
+}
+
+@keyframes stretch95 {
+	0% {
+		max-width: 0%;
+	}
+	100% {
+		max-width: 95%;
+	}
+}
+
+@keyframes shadowDrop {
+	0% {
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+	100% {
+		box-shadow: var(--shadow);
+	}
+}
+
+@keyframes shadowDropDM {
+	0% {
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+	100% {
+		box-shadow: var(--shadow-dm);
+	}
+}
+
+@keyframes fontTo18 {
+	0% {
+		font-size: 0;
+	}
+	100% {
+		font-size: 1.8rem;
+	}
+}
+
+@keyframes unHide {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}

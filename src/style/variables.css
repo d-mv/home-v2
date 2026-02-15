@@ -1,0 +1,37 @@
+@import "./keyframes.css";
+
+:root {
+	/* Colors */
+	--color-white: rgb(247, 247, 247);
+	--color-white-trans: rgba(247, 247, 247, 0.5);
+	--color-white-80: rgba(247, 247, 247, 0.8);
+	--color-dark: #444;
+	--color-grey: #707070;
+	--color-dark-shadow: rgba(68, 68, 68, 0.2);
+	--color-dark-shadow-dm: rgba(0, 0, 0, 0.2);
+	--color-dark-30: rgba(68, 68, 68, 0.3);
+	--color-dark-30-dm: rgba(0, 0, 0, 0.3);
+	--color-black-30: rgba(0, 0, 0, 0.3);
+	--color-dark-modal: rgba(68, 68, 68, 0.9);
+	--color-accent: #fc8d01;
+	--color-light-grey: #efefef;
+
+	/* Typography */
+	--font-sans: Rubik, Helvetica, Arial, sans-serif;
+	--font-serif: "Roboto Slab", "Times New Roman", serif;
+
+	/* UI Shadows */
+	--shadow: 0 0.5rem 1rem 0.5rem var(--color-dark-shadow);
+	--shadow-dm: 0 0.5rem 1rem 0.5rem var(--color-dark-shadow-dm);
+	--shadow-active: 0 0.3rem 0.8rem 0.5rem var(--color-dark-30);
+	--shadow-active-dm: 0 0.3rem 0.8rem 0.5rem var(--color-dark-30-dm);
+	--shadow-hover: 0 0.3rem 2rem 0.5rem var(--color-dark-30);
+	--text-shadow: 0 0.1rem 0.1rem var(--color-dark-shadow);
+	--text-shadow-dm: 0 0.1rem 0.1rem var(--color-dark-shadow-dm);
+	--shadow-plank: 0 0.1rem 0.5rem 0.1rem var(--color-dark-shadow);
+	--shadow-plank-dm: 0 0.1rem 0.5rem 0.1rem var(--color-dark-shadow-dm);
+
+	/* Animation */
+	--transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+	--transition-slow: all 0.7s cubic-bezier(0.42, 0, 0.58, 1);
+}

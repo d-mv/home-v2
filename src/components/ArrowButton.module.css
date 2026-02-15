@@ -1,0 +1,39 @@
+.arrow {
+	background: none;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	padding: 0 0.5rem;
+	border-radius: 0.4rem;
+	transition: var(--transition);
+
+	& svg {
+		width: 2rem;
+		height: 2rem;
+	}
+
+	&:first-of-type {
+		margin-inline-start: -0.5rem;
+		margin-inline-end: 0.5rem;
+	}
+
+	&:last-of-type {
+		margin-inline-start: 0.5rem;
+		margin-inline-end: -0.5rem;
+	}
+
+	@media (hover: hover) {
+		@media (prefers-color-scheme: dark) {
+			&:hover {
+				background-color: var(--color-white-trans);
+				color: var(--color-dark);
+			}
+		}
+		@media (prefers-color-scheme: light) {
+			&:hover {
+				background-color: var(--color-dark);
+				color: var(--color-white);
+			}
+		}
+	}
+}

@@ -1,0 +1,88 @@
+@import "../style/keyframes.css";
+
+.navigation {
+	display: flex;
+	position: fixed;
+	top: 3rem;
+	left: -3rem;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 2;
+	transform: translateX(-100%);
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-name: unHide, appear;
+	/* animation-delay set via inline style */
+
+	@media (max-width: 499px) {
+		top: 3.9rem;
+		left: 0;
+		border-radius: 0 0.4rem 0.4rem 0;
+		background-color: var(--color-dark-modal);
+	}
+}
+
+.box {
+	width: 10rem;
+	height: var(--box-height, 12rem);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@media (max-width: 499px) {
+		width: 13rem;
+		height: 5rem;
+		justify-content: flex-start;
+	}
+}
+
+.button {
+	/* Reset & Base */
+	appearance: none;
+	border: none;
+	margin: 0;
+
+	/* Specific styles */
+	font-family: var(--font-sans);
+	font-weight: 300;
+	font-size: 2rem;
+
+	padding: 2rem 1rem;
+	background-color: transparent;
+	transform: rotate(-90deg);
+	transition: var(--transition-slow);
+
+	text-align: center;
+	cursor: pointer;
+	outline: none;
+	color: var(--color-dark);
+
+	@media (prefers-color-scheme: dark) {
+		color: var(--color-white);
+	}
+
+	/* .active state override */
+	&.active {
+		color: var(--color-accent) !important;
+	}
+
+	@media (hover: hover) and (min-width: 500px) {
+		&:hover {
+			transform: none;
+			height: 80%;
+			width: 250%;
+			padding-left: 10rem;
+			padding-right: 2rem;
+			color: var(--color-dark);
+			background-color: var(--color-white-80);
+			border-radius: 0 0.4rem 0.4rem 0;
+		}
+	}
+
+	@media (max-width: 499px) {
+		padding: 1rem;
+		transform: none;
+		color: var(--color-white);
+	}
+}

@@ -1,0 +1,105 @@
+@import "../style/keyframes.css";
+
+.column {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 40rem;
+	height: 100%;
+	padding: 1rem;
+	margin: 0 1rem;
+
+	@media (max-width: 999px) {
+		width: 80%;
+	}
+	@media (max-width: 899px) {
+		width: 90%;
+	}
+	@media (max-width: 699px) {
+		width: 100%;
+		height: inherit;
+	}
+}
+
+.line {
+	/* Reset */
+	appearance: none;
+	border: none;
+	font-family: inherit;
+	font-size: 100%;
+	line-height: 1.15;
+	margin: 0;
+	padding: 0;
+
+	margin-block-start: 0;
+	margin-block-end: 0;
+	color: var(--color-dark);
+
+	@media (prefers-color-scheme: dark) {
+		color: var(--color-white);
+	}
+
+	/* Specific styles */
+	width: 100%;
+	display: flex;
+	padding: 1rem 2rem;
+	margin: 0.5rem 0;
+	opacity: 0;
+	justify-content: center; /* Default, overridden by prop if needed */
+	align-items: center;
+	border-radius: 0.4rem;
+	background-color: var(--color-light-grey);
+	border-bottom: 2px solid var(--color-light-grey);
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-name: appear;
+	/* animation-delay handled via inline style */
+	cursor: pointer;
+
+	& svg {
+		color: var(--color-dark);
+		height: 3rem;
+		width: 3rem;
+		text-shadow: var(--text-shadow);
+	}
+
+	@media (prefers-color-scheme: dark) and (min-width: 500px) {
+		&:hover {
+			border-bottom: 2px solid var(--color-accent);
+			box-shadow: var(--shadow-plank-dm);
+		}
+	}
+	@media (prefers-color-scheme: light) and (min-width: 500px) {
+		&:hover {
+			border-bottom: 2px solid var(--color-dark);
+			box-shadow: var(--shadow-plank);
+		}
+	}
+	@media (prefers-color-scheme: dark) and (max-width: 499px) {
+		&:active {
+			border-bottom: 2px solid var(--color-accent);
+			box-shadow: var(--shadow-plank-dm);
+		}
+	}
+	@media (prefers-color-scheme: light) and (max-width: 499px) {
+		&:active {
+			border-bottom: 2px solid var(--color-dark);
+			box-shadow: var(--shadow-plank);
+		}
+	}
+}
+
+.label {
+	margin-inline-start: 2rem;
+	font: var(
+		--font-sans
+	); /* 'contact' token was essentially fontSans + 1.8rem + 300 weight.  */
+	/* The 'contact' variable in TS was: normal 300 1.8rem ${fontSans} */
+	/* We can define a class for that or put it here. */
+	font-weight: 300;
+	font-size: 1.8rem;
+
+	color: var(--color-dark);
+	text-shadow: var(--text-shadow);
+}
